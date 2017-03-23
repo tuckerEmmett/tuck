@@ -3,14 +3,16 @@
 #include <string.h>
 
 
-void mat_multiply(int argc, const char *argv[]){
+void main(int argc, const char *argv[]){
+printf("Loading in file \n")
+
+;
+FILE * myfile;
 
 
 
-int test = atoi(argv[1]);
 
-printf("Value returned is %d",test);
-
+myfile = fopen(argv[1],"r");
 
 
 
@@ -18,9 +20,3 @@ return;
 
 }
 
-
-int main(){
-
-return 0;
-
-}
