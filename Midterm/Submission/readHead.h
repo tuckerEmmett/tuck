@@ -1,6 +1,6 @@
 #ifndef readfile_H
 #define readfile_H
 
-void readfile(const char *arvg[],int whichinput);
+int *readfile(const char *arvg[],int whichinput, int matrix[3][3]);
 
 #endif
