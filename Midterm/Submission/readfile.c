@@ -3,7 +3,7 @@
 
 
 
-void main(int argc, const char *argv[]){
+void readfile(int argc, const char *argv[]){
 printf("Loading in file \n");
 
 FILE *myfile = fopen(argv[1],"r");
@@ -44,7 +44,9 @@ printf("testing value two %d \n", line[1][1]);
 
 int val;
 //Important to remember that all indices are less one. I.E index 1,3 in a matrix is rep'd by 0,2 in C.
-val=line[1][2]*line[0][1];
+
+
+
 
 printf("Val equals %d \n",val);
 fclose(myfile);
