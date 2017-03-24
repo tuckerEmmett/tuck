@@ -6,30 +6,40 @@
 void main(int argc, const char *argv[]){
 printf("Loading in file \n");
 
-
 FILE *myfile = fopen(argv[1],"r");
 
+
 int ii = 0;
-int *val = malloc(11);
+
 fscanf(myfile,"%d",&ii);
 
-
-while (!feof(myfile))
+while (!feof (myfile))
 
 {
 
-printf("%d",ii);
-*val = fscanf(myfile,"%d",&ii);
+	printf("%d \n",ii);
+
+	fscanf(myfile,"%d",&ii);
 
 }
+
+printf("Checking something \n");
+
+printf("My values are %d \n",*ii);
+
+
 fclose(myfile);
 
+int test[sizeof(ii)/sizeof(int)];
 
-int add = val(1) + val(2);
+for (unsigned int x = 0; x < sizeof(ii)/sizeof(int); x++)
 
-printf("added value is %d",add);
+{
 
-printf("Exiting code \n");
+test[x] = ii;
+}
+
+printf("And this is the last part %d \n ",*test);
 return;
 
 
