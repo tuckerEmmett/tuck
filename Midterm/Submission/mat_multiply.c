@@ -9,36 +9,45 @@ printf("Loading in file \n");
 FILE *myfile = fopen(argv[1],"r");
 
 
-int ii = 0;
+int m, n;
+fscanf(myfile,"%d",&m);
+fscanf(myfile,"%d",&n); 
 
-fscanf(myfile,"%d",&ii);
 
-int counter = 0;
+printf("M is %d \n",m);
+printf("N is %d \n",n);
+printf("Therefore matrix is a %d by %d matrix",m,n);
+ 
+int line[m][n];
 
-while (!feof (myfile))
 
-{
+for (int ii =0; ii<m; ii++){
 
-	printf("%d \n",ii);
-	fscanf(myfile,"%d",&ii);
-	counter++;
+	for (int jj = 0; jj < n-1; jj++){
+
+	fscanf(myfile,"%d",&line[ii][jj]);
+
+
+	}
+
+fscanf(myfile,"%d",&line[ii][n-1]);
+
+
+
 }
 
+//int *me = malloc(sizeof(int)*counter);
+
+printf("Testing matrix values %d \n", line[0][0]);
+
+printf("testing value two %d \n", line[1][1]);
+
+int val;
+//Important to remember that all indices are less one. I.E index 1,3 in a matrix is rep'd by 0,2 in C.
+val=line[1][2]*line[0][1];
+
+printf("Val equals %d \n",val);
 fclose(myfile);
-
-printf("Checking something. Counter is %d \n",counter);
-
-
-
-int *me = malloc(sizeof(int)*counter);
-
-me[1] = 69;
-me[2]=240;
-
-printf("my value is %d \n",me[1]);
-
-printf("my value is also %d \n", ii);
-
 return;
 
 
