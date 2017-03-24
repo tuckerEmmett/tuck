@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 
 
 void main(int argc, const char *argv[]){
@@ -20,20 +20,24 @@ while (!feof (myfile))
 {
 
 	printf("%d \n",ii);
-
-	 fscanf(myfile,"%d",&ii);
+	fscanf(myfile,"%d",&ii);
 	counter++;
 }
 
+fclose(myfile);
+
 printf("Checking something. Counter is %d \n",counter);
 
-//printf("My values are %d \n",matrix[5]
-
-int matrix[counter];
 
 
+int *me = malloc(sizeof(int)*counter);
 
-fclose(myfile);
+me[1] = 69;
+me[2]=240;
+
+printf("my value is %d \n",me[1]);
+
+printf("my value is also %d \n", ii);
 
 return;
 
