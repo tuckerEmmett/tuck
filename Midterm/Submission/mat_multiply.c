@@ -13,33 +13,28 @@ int ii = 0;
 
 fscanf(myfile,"%d",&ii);
 
+int counter = 0;
+
 while (!feof (myfile))
 
 {
 
 	printf("%d \n",ii);
 
-	fscanf(myfile,"%d",&ii);
-
+	 fscanf(myfile,"%d",&ii);
+	counter++;
 }
 
-printf("Checking something \n");
+printf("Checking something. Counter is %d \n",counter);
 
-printf("My values are %d \n",*ii);
+//printf("My values are %d \n",matrix[5]
+
+int matrix[counter];
+
 
 
 fclose(myfile);
 
-int test[sizeof(ii)/sizeof(int)];
-
-for (unsigned int x = 0; x < sizeof(ii)/sizeof(int); x++)
-
-{
-
-test[x] = ii;
-}
-
-printf("And this is the last part %d \n ",*test);
 return;
 
 
