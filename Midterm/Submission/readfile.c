@@ -16,9 +16,9 @@ printf("M is %d \n",m);
 printf("N is %d \n",n);
 printf("Therefore matrix is a %d by %d matrix\n",m,n);
 
-vector=malloc(sizeof(int)*n*m);
+vector=malloc(n*m*sizeof(int));
 
-for (int ii =0; ii< (m*n); ii++){
+for (int ii =0; ii<(m*n); ii++){
 
 
 fscanf(matrixOne, "%d",&vector[ii]);
